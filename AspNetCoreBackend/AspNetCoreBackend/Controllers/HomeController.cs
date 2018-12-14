@@ -47,15 +47,20 @@ namespace AspNetCoreBackend.Controllers
         {
             return Content("Hello world");
         }
+        //ei mitään hajua mitä tehtiin tähän olisi pitänyt tehdä joku oma, reverge energy your model
         public IActionResult TietokantaTesti()
         {
             StringBuilder teksti = new StringBuilder();
             NorthwindContext malli = new NorthwindContext();
-            foreach (Customers asiakas in malli.Customers)
+            List<Customers> suomalaiset = (from c in malli.Customers
+                                           where c.Country == "Finland"
+                                           orderby c.CompanyName
+                                           select c).ToList();
+            foreach (Customers asiakas in suomalaiset)
             {
                 teksti.AppendLine(asiakas.CompanyName);
             }
             return Content(teksti.ToString());
         }
     }
-}
+    }
