@@ -1,17 +1,102 @@
 ﻿@{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "";
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+<style>
+    body {
+        position: relative;
+    }
+
+    ul.nav-pills {
+        top: 20px;
+        position: fixed;
+    }
+
+    div.col-sm-9 div {
+        height: 250px;
+        font-size: 28px;
+    }
+
+    #section1 {
+        color: #fff;
+        background-color: #1E88E5;
+    }
+
+    #section2 {
+        color: #fff;
+        background-color: #673ab7;
+    }
+
+    #section3 {
+        color: #fff;
+        background-color: #ff9800;
+    }
+
+    #section4 {
+        color: #fff;
+        background-color: #00bcd4;
+    }
+
+    #section5 {
+        color: #fff;
+        background-color: #009688;
+    }
+
+    @@media screen and (max-width: 810px) {
+        #section1, #section2, #section3, #section4, #section5 {
+            margin-left: 150px;
+        }
+    }
+</style>
+<!--<div class="jumbotron">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+       
+    </p>
+</div>-->
+<div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+            <li><a href="#section5">Section 5</a></li>
+                </ul>
+           
+       
+    </nav>
+    <div class="col-sm-9">
+        <div id="section1">
+            <h1>Section 1</h1>
+            <p>
+                Try to scroll this section and look at the navigation list while scrolling!Try to scroll this section and look at the navigation list while scrolling.Try to scroll this section and look at the navigation list while scrolling.Try to scroll this section and look at the navigation list while scrolling
+                Try to scroll this section and look at the navigation list while scrolling
+                Try to scroll this section and look at the navigation list while scrolling
+            </p>
+        </div>
+        <div id="section2">
+            <h1>Section 2</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+        <div id="section3">
+            <h1>Section 3</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+        <div id="section4">
+            <h1>Section 4</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+        <div id="section5">
+            <h1>Section 5</h1>
+            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        </div>
+    </div>
+</div>
