@@ -19,7 +19,6 @@ namespace AspNetCoreBackend.Controllers
         }
         [Route("{key}")]
       
-     
             public Customers GetSingle(string key)
             {
                 NorthwindContext context = new NorthwindContext();
