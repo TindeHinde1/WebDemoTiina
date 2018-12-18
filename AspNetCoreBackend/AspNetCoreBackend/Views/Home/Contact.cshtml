@@ -4,99 +4,119 @@
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
-
-
 <style>
     body {
-        position: relative;
+        font-family: "Lato", sans-serif;
     }
-
-    ul.nav-pills {
-        top: 20px;
+    .sidenav {
+        height: 100%;
+        width: 0;
         position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
     }
-
-    div.col-sm-9 div {
-        height: 250px;
-        font-size: 28px;
-    }
-
-    #section1 {
-        color: #fff;
-        background-color: #1E88E5;
-    }
-
-    #section2 {
-        color: #fff;
-        background-color: #673ab7;
-    }
-
-    #section3 {
-        color: #fff;
-        background-color: #ff9800;
-    }
-
-    #section4 {
-        color: #fff;
-        background-color: #00bcd4;
-    }
-
-    #section5 {
-        color: #fff;
-        background-color: #009688;
-    }
-
-    @@media screen and (max-width: 810px) {
-        #section1, #section2, #section3, #section4, #section5 {
-            margin-left: 150px;
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
         }
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 35px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 16px;
+    }
+
+    @@media screen and (max-height: 450px) {
+        .sidenav {
+            padding-top: 15px;
+        }
+
+            .sidenav a {
+                font-size: 18px;
+            }
     }
 </style>
-<!--<div class="jumbotron">
-    <h1 class="display-4">Hello, world!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-       
-    </p>
-</div>-->
-<div class="row">
-    <nav class="col-sm-3" id="myScrollspy">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#section1">Section 1</a></li>
-            <li><a href="#section2">Section 2</a></li>
-            <li><a href="#section3">Section 3</a></li>
-            <li><a href="#section4">Section 4</a></li>
-            <li><a href="#section5">Section 5</a></li>
-                </ul>
-           
-       
-    </nav>
-    <div class="col-sm-9">
-        <div id="section1">
-            <h1>Section 1</h1>
-            <p>
-                Try to scroll this section and look at the navigation list while scrolling!Try to scroll this section and look at the navigation list while scrolling.Try to scroll this section and look at the navigation list while scrolling.Try to scroll this section and look at the navigation list while scrolling
-                Try to scroll this section and look at the navigation list while scrolling
-                Try to scroll this section and look at the navigation list while scrolling
-            </p>
-        </div>
-        <div id="section2">
-            <h1>Section 2</h1>
-            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-        </div>
-        <div id="section3">
-            <h1>Section 3</h1>
-            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-        </div>
-        <div id="section4">
-            <h1>Section 4</h1>
-            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-        </div>
-        <div id="section5">
-            <h1>Section 5</h1>
-            <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-        </div>
-    </div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
 </div>
+
+<div id="main">
+    <h2>TÄHÄN TULEE OTSIKKO!--- SOVELLUSIDEOITA ----Sidenav Push Example</h2>
+    <p>
+        Click on the element below to open the side navigation menu, and push this content to the right.
+        MUTTA MITEN SAISI MUUTKIN TEKSTIT MENEMÄÄN OIKEALLE KUN NAVBAR AVATAAN
+    </p>
+
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Ideavalikkoon</span>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="~/images/pikku200.jpg" />
+        </div>
+        <div class="col-md-10">
+            <p>
+                Lots of text here...With the four tiers of grids available you're bound to run into issues where, at certain breakpoints,
+                your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a .clearfix and o
+                your columns don't clear quite right as one is taller than the other. To fix that, use a combination of a .clearfix and o
+                your columns don't clear quite right as one is taller than the other.
+            </p>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">linkki aiheeseen</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">aasinsilta aiheeseen</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
