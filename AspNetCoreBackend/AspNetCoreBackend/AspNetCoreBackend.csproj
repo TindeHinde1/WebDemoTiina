@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\banner1.svg" />
+    <Content Remove="wwwroot\images\banner2.svg" />
+    <Content Remove="wwwroot\images\banner3.svg" />
     <Content Remove="wwwroot\images\tonni400kuva2.jpg" />
     <Content Remove="wwwroot\images\tonni400kuva3.jpg" />
     <Content Remove="wwwroot\images\vanhatValineet.jpg" />
