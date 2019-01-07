@@ -5,9 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\images\alppiruusuSyksy.JPG" />
     <Content Remove="wwwroot\images\banner1.svg" />
     <Content Remove="wwwroot\images\banner2.svg" />
     <Content Remove="wwwroot\images\banner3.svg" />
+    <Content Remove="wwwroot\images\CVsivulle.png" />
+    <Content Remove="wwwroot\images\karuselli1.jpg" />
+    <Content Remove="wwwroot\images\kasitteet.png" />
+    <Content Remove="wwwroot\images\tonni400kuva1.jpg" />
     <Content Remove="wwwroot\images\tonni400kuva2.jpg" />
     <Content Remove="wwwroot\images\tonni400kuva3.jpg" />
     <Content Remove="wwwroot\images\vanhatValineet.jpg" />
